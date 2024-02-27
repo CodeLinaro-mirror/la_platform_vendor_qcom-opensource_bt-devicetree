@@ -97,3 +97,15 @@
 &qupv3_se13_q2spi {
 	status = "ok";
 };
+
+//spi instance
+&qupv3_se13_spi {
+	status = "disabled";
+	spi_cnss {
+		compatible = "qcom,spi-cnss";
+		reg = <0>;
+		spi-max-freq = <32000000>;
+		interrupt-parent = <&tlmm>;
+		qcom,irq-gpio = <&tlmm 47 0>;
+	};
+};
