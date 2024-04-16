@@ -1,0 +1,100 @@
+// SPDX-License-Identifier: BSD-3-Clause
+
+/*
+ * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ */
+
+#include <dt-bindings/interconnect/qcom,volcano.h>
+#include <dt-bindings/clock/qcom,rpmh.h>
+/*
+&pm8550ve_f_gpios {
+	bt_en: bt_en {
+		pins = "gpio5";
+		function = "normal";
+		input-disable;
+		output-enable;
+		bias-disable;
+		power-source = <1>;
+	};
+	bt_fmd_clk_en: bt_fmd_clk_en {
+		pins = "gpio6";
+		function = "normal";
+		input-enable;
+		output-disable;
+		bias-disable;
+		power-source = <1>;
+	};
+};
+*/
+&tlmm {
+	cnss_bt_sw_ctrl: cnss_wlan_sw_ctrl {
+		mux {
+			pins = "gpio45";
+			function = "wcn_sw_ctrl";
+		};
+	};
+};
+
+&soc {
+	bluetooth: wcn788x {
+			compatible = "qcom,wcn788x";
+			//nvmem-cells = <&fmd_set>;
+			//nvmem-cell-names = "fmd_set";
+			//clocks = <&rpmhcc RPMH_RF_CLK1>;
+			//clock-names = "bt_rf_clk1";
+			qcom,wcn788x;
+			//pinctrl-names = "bt_en", "sw_ctrl", "bt_fmd_clk_en";
+			//pinctrl-0 = <&bt_en>;
+			//pinctrl-1 = <&cnss_bt_sw_ctrl>;
+			//pinctrl-2 = <&bt_fmd_clk_en>;
+			/* List of GPIOs to be setup for interrupt wakeup capable*/
+			mpm_wake_set_gpios = <45 >;
+			qcom,wl-reset-gpio = <&tlmm 44 0>; /* WL_EN */
+			qcom,bt-sw-ctrl-gpio = <&tlmm 45 0>; /* SW_CTRL */
+			qcom,bt-reset-gpio = <&tlmm 53 0>; /* BT_EN */
+			//qcom,bt-fmd-clk-gpio = <&pm8550ve_f_gpios 6 0>; /* FMD_CLK_CTRL */
+			//qcom,bt-reset-gpio = <&pm8550ve_f_gpios 5 0>; /* BT_EN */
+			qcom,qmp = <&aoss_qmp>;
+
+			qcom,bt-vdd18-aon-supply  = <&L7B>;   /* VDD1P8_AON */
+			qcom,bt-vdd12-io-supply   = <&L5B>;   /* VDD1P2_IO */
+			//NTD-qcom,bt-ant-ldo-supply    = <&L18B>;   /* AV91C_VDD Extractor */
+			qcom,bt-vdd-dig-supply    = <&S1L>;   /* BT CX_MX LDO */
+			qcom,bt-vdd-aon-supply    = <&S1K>;   /* RFA_CMN/AON */
+			qcom,bt-vdd-rfa0p75-supply = <&S1K>;  /* RFA_OP75 */
+			qcom,bt-vdd-rfa1p8-supply  = <&S1B>;  /* RFA_1P8 */
+			qcom,bt-vdd-rfa1p25-supply = <&S2B>; /* RFA_1P2 */
+
+			qcom,bt-vdd18-aon-config  = <1800000 1800000 0 1 0>;
+			qcom,bt-vdd12-io-config   = <1200000 1200000 0 1 0>;
+			//NTD-qcom,bt-ant-ldo-config    = <1800000 1860000 0 1 0>;
+			qcom,bt-vdd-dig-config    = <300000 1000000 0 1 0>;
+			qcom,bt-vdd-aon-config    = <300000 1000000 0 1 0>;
+			qcom,bt-vdd-rfa0p75-config = <300000 1000000 0 1 0>;
+			qcom,bt-vdd-rfa1p8-config = <1860000 2000000 0 1 0>;
+			qcom,bt-vdd-rfa1p25-config  = <1312000 1340000 0 1 0>;
+
+			qcom,pdc_init_table =
+				"{class: wlan_pdc, ss: rf, res: s5f.m, enable: 1}",
+				"{class: wlan_pdc, ss: rf, res: s5f.v, enable: 1}",
+				"{class: wlan_pdc, ss: rf, res: s5f.v, upval: 876}",
+				"{class: wlan_pdc, ss: rf, res: s5f.v, dwnval: 876}";
+	};
+};
+
+//&swr4 {
+//	btswr_slave: btswr-slave {
+//		compatible = "qcom,btfmswr_slave";
+//		reg = <0x02 0x08170220>;
+//	};
+//};
+
+//uart instance
+&qupv3_se11_4uart {
+	status = "ok";
+};
+
+//spi instance
+//&qupv3_se2_spi {
+//	status = "ok";
+//};
