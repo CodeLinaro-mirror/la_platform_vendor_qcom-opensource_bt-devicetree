@@ -10,6 +10,10 @@ dtbo-y += sun-kiwi-bt-v8.dtbo
 dtbo-y += sun-wcn788x-v8.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_VOLCANO), y)
+dtbo-y += volcano-bt.dtbo
+endif
+
 always-y        := $(dtb-y) $(dtbo-y)
 subdir-y        := $(dts-dirs)
 clean-files     := *.dtb *.dtbo
