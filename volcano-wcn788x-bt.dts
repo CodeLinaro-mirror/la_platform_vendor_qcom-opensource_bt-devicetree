@@ -10,9 +10,9 @@
 #include "volcano-wcn788x-bt.dtsi"
 
 / {
-    model = "Qualcomm Technologies, Inc. Volcano6I IOT SOC + Ganges";
-	compatible = "qcom,volcano-idp", "qcom,volcano", "qcom,volcanop-idp", "qcom,volcanop", "qcom,idp", 
-				"qcom,volcano-mtp", "qcom,volcanop-mtp", "qcom,mtp";
+    model = "Qualcomm Technologies, Inc. Volcano6I IOT SOC + Ganges/Brahma";
+	compatible = "qcom,volcano-idp", "qcom,volcano", "qcom,volcanop-idp", "qcom,volcanop",
+			 "qcom,idp", "qcom,volcano-mtp", "qcom,volcanop-mtp", "qcom,mtp";
 	qcom,msm-id = <657 0x10000>, <658 0x10000>;
-	qcom,board-id = <8 2>, <8 3>, <8 4>, <34 2>;
+	qcom,board-id = <8 2>, <8 3>, <8 4>, <8 5>, <8 6>, <34 2>, <34 3>;
 };
