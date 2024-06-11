@@ -25,6 +25,7 @@
 &soc {
 	bluetooth: bt_wcn6750 {
 		compatible = "qcom,wcn6750-bt";
+		status = "disabled";
 		pinctrl-names = "default";
 		pinctrl-0 = <&bt_en_sleep>;
 		/* List of GPIOs to be setup for interrupt wakeup capable*/
