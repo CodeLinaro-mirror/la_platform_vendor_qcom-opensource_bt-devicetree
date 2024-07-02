@@ -58,7 +58,7 @@
 			qcom,bt-vdd18-aon-supply  = <&L1B>;   /* VDD1P8_AON */
 			qcom,bt-vdd12-io-supply   = <&L5B>;   /* VDD1P2_IO */
 			qcom,bt-ant-ldo-supply    = <&L18B>;   /* AV91C_VDD Extractor */
-			//qcom,bt-vdd-dig-supply    = <&S1L>;   /* BT CX_MX LDO */
+			qcom,bt-vdd-dig-supply    = <&S1L>;   /* BT CX_MX LDO */
 			qcom,bt-vdd-aon-supply    = <&S1K>;   /* RFA_CMN/AON */
 			//qcom,bt-vdd-rfa0p75-supply = <&S1K>;  /* RFA_OP75 */
 			qcom,bt-vdd-rfa1p8-supply  = <&S1B>;  /* RFA_1P8 */
@@ -67,9 +67,9 @@
 			qcom,bt-vdd18-aon-config  = <1800000 1800000 0 1 1>;
 			qcom,bt-vdd12-io-config   = <1200000 1200000 0 1 1>;
 			qcom,bt-ant-ldo-config    = <2800000 2800000 0 1 0>;
-			//qcom,bt-vdd-dig-config    = <876000 1000000 0 1 0>;
-			qcom,bt-vdd-aon-config    = <876000 1004000 0 1 0>;
-			//qcom,bt-vdd-rfa0p75-config = <876000 1004000 0 1 0>;
+			qcom,bt-vdd-dig-config    = <876000 1000000 0 0 0>;
+			qcom,bt-vdd-aon-config    = <876000 1004000 0 0 0>;
+			//qcom,bt-vdd-rfa0p75-config = <876000 1004000 0 0 0>;
 			qcom,bt-vdd-rfa1p8-config = <1860000 2000000 0 1 0>;
 			qcom,bt-vdd-rfa1p25-config  = <1312000 1340000 0 1 0>;
 
