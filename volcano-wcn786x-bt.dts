@@ -7,7 +7,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "volcano-wcn788x-bt.dtsi"
+#include "volcano-wcn786x-bt.dtsi"
 
 / {
     model = "Qualcomm Technologies, Inc. Volcano6I IOT SOC + Ganges/Brahma";
