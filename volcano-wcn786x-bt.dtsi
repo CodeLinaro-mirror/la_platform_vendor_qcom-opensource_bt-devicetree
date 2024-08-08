@@ -88,12 +88,12 @@
 	};
 };
 
-//&swr4 {
-//	btswr_slave: btswr-slave {
-//		compatible = "qcom,btfmswr_slave";
-//		reg = <0x02 0x08170220>;
-//	};
-//};
+&swr3 {
+	btswr_slave: btswr-slave {
+		compatible = "qcom,btfmswr_slave";
+		reg = <0x02 0x08170220>;
+	};
+};
 
 //uart instance
 &qupv3_se11_4uart {
