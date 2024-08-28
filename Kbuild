@@ -7,13 +7,13 @@ dtbo-y += sun-peach-bt.dtbo
 dtbo-y += sun-kiwi-bt.dtbo
 dtbo-y += sun-peach-bt-v8.dtbo
 dtbo-y += sun-kiwi-bt-v8.dtbo
-dtbo-y += sun-wcn788x-v8.dtbo
+dtbo-y += sun-wcn786x-v8.dtbo
 dtbo-y += sunp-hdk-peach-bt-v8.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_VOLCANO), y)
 dtbo-y += volcano-bt.dtbo
-dtbo-y += volcano-wcn788x-bt.dtbo
+dtbo-y += volcano-wcn786x-bt.dtbo
 endif
 
 always-y        := $(dtb-y) $(dtbo-y)
