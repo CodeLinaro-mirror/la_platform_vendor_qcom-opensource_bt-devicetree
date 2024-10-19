@@ -1,3 +1,9 @@
+ifeq ($(CONFIG_ARCH_CANOE), y)
+dtbo-y += canoe-peach-bt.dtbo
+dtbo-y += canoe-wcn786x-bt.dtbo
+dtbo-y += canoe-kiwi-bt.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_PINEAPPLE),y)
 dtbo-y += pineapple-kiwi-bt.dtbo
 endif
