@@ -86,7 +86,7 @@
 
 //uart instance
 &qupv3_se18_4uart {
-	status = "disabled";
+	status = "ok";
 };
 
 //spi instance
