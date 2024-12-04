@@ -30,10 +30,7 @@
 &soc {
 	bluetooth: bt_kiwi {
 			compatible = "qcom,kiwi";
-
-			clocks = <&rpmhcc RPMH_RF_CLK1>;
-			clock-names = "bt_rf_clk1";
-			pinctrl-names = "bt_en", "sw_ctrl";
+        		pinctrl-names = "bt_en", "sw_ctrl";
 			pinctrl-0 = <&bt_en>;
 			pinctrl-1 = <&cnss_bt_sw_ctrl>;
 			/* List of GPIOs to be setup for interrupt wakeup capable*/
@@ -53,13 +50,19 @@
 
 			qcom,bt-vdd18-aon-config  = <1800000 1800000 30000 1 0>;
 			qcom,bt-vdd12-io-config   = <1200000 1200000 30000 1 0>;
-			qcom,bt-ant-ldo-config    = <1800000 1860000 0 1 0>;
+			qcom,bt-ant-ldo-config    = <1800000 2000000 0 1 0>;
 			qcom,bt-vdd-aon-config    = <916000 1100000 0 1 0>;
 			qcom,bt-vdd-rfaOp8-config = <916000 1100000 0 1 0>;
-			qcom,bt-vdd-rfa1-config   = <1316000 1340000 0 1 0>;
+			qcom,bt-vdd-rfa1-config   = <1316000 1400000 0 1 0>;
 			qcom,bt-vdd-rfa2-config   = <1864000 2000000 0 1 0>;
 
-			// TODO PDC TABLE  BUS BW
+        		qcom,pdc_init_table =
+        			"{class: wlan_pdc, ss: rf, res: S8F0.v, upval: 1900}",
+        			"{class: wlan_pdc, ss: rf, res: S8F0.v, dwnval: 1860}",
+        			"{class: wlan_pdc, ss: rf, res: S7F0.v, upval: 1352}",
+        			"{class: wlan_pdc, ss: rf, res: S7F0.v, dwnval: 988}",
+        			"{class: wlan_pdc, ss: rf, res: S7G0.m, enable: 1}",
+        			"{class: wlan_pdc, ss: rf, res: S7G0.v, enable: 1}";
 
 	};
 
