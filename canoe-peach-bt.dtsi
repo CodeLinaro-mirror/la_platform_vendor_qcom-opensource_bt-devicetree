@@ -77,10 +77,10 @@
 			qcom,bt-vdd-wlan-aon-config = <892000 1000000 0 0 1>;
 
 			qcom,pdc_init_table =
-				"{class: wlan_pdc, ss: rf, res: s2j.m, enable: 1}", // to be checked
-				"{class: wlan_pdc, ss: rf, res: s2j.v, enable: 1}", // to be checked
-				"{class: wlan_pdc, ss: rf, res: s2j.v, upval: 876}", // to be checked
-				"{class: wlan_pdc, ss: rf, res: s2j.v, dwnval: 876}"; // to be checked
+				"{class: wlan_pdc, ss: rf, res: S2J1.m, enable: 1}", // to be checked
+				"{class: wlan_pdc, ss: rf, res: S2J1.v, enable: 1}", // to be checked
+				"{class: wlan_pdc, ss: rf, res: S2J1.v, upval: 876}", // to be checked
+				"{class: wlan_pdc, ss: rf, res: S2J1.v, dwnval: 876}"; // to be checked
 	};
 };
 
