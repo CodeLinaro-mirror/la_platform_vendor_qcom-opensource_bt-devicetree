@@ -98,7 +98,7 @@
 
 //spi instance
 &qupv3_se17_spi {
-	status = "disabled";
+	status = "ok";
 	spi_cnss {
 		compatible = "qcom,spi-cnss";
 		reg = <0>;
