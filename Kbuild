@@ -26,6 +26,11 @@ dtbo-y += parrot-wcn3990-bt.dtbo
 dtbo-y += parrot-wcn6750-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_YUPIK), y)
+dtbo-y += yupik-wcn6750-bt.dtbo
+dtbo-y += yupik-qca6490-bt.dtbo
+endif
+
 always-y        := $(dtb-y) $(dtbo-y)
 subdir-y        := $(dts-dirs)
 clean-files     := *.dtb *.dtbo
