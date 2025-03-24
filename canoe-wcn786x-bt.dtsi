@@ -73,8 +73,8 @@
 			qcom,bt-vdd-rfa1p8-config = <1876000 2000000 0 1 0>;
 			qcom,bt-vdd-rfa1p25-config  = <1328000 1340000 0 1 0>;
 
-			/* WLAN MX regulator for FMD feature */
-			qcom,bt-vdd-wlan-aon-supply = <&S2J>;
+			/* WLAN CX regulator for FMD feature */
+			qcom,bt-vdd-wlan-aon-supply = <&S1J>;
 			qcom,bt-vdd-wlan-aon-config = <892000 1000000 0 0 1>;
 
 			qcom,pdc_init_table =
