@@ -26,6 +26,11 @@ dtbo-y += parrot-wcn3990-bt.dtbo
 dtbo-y += parrot-wcn6750-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_ALOR), y)
+dtbo-y += alor-peach-bt.dtbo
+dtbo-y += alor-wcn7750-bt.dtbo
+endif
+
 always-y        := $(dtb-y) $(dtbo-y)
 subdir-y        := $(dts-dirs)
 clean-files     := *.dtb *.dtbo
