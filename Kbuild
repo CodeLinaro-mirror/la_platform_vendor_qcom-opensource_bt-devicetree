@@ -14,6 +14,7 @@ endif
 ifeq ($(CONFIG_ARCH_VOLCANO), y)
 dtbo-y += volcano-bt.dtbo
 dtbo-y += volcano-wcn786x-bt.dtbo
+dtbo-y += volcano-wcn6450-bt.dtbo
 endif
 
 always-y        := $(dtb-y) $(dtbo-y)
