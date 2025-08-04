@@ -16,6 +16,10 @@ dtbo-y += volcano-bt.dtbo
 dtbo-y += volcano-wcn786x-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_RAVELIN),y)
+dtbo-y += ravelin-qca6490-bt.dtbo
+endif
+
 always-y        := $(dtb-y) $(dtbo-y)
 subdir-y        := $(dts-dirs)
 clean-files     := *.dtb *.dtbo
