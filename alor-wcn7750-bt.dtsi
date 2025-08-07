@@ -64,13 +64,13 @@
 		qcom,bt-vdd-rfa2-supply    = <&S4F>; /* RFA 1p2 */
 		qcom,bt-vdd-ipa-2p2-supply = <&S3D>; /* WCN_2p2_RFA */
 
-		qcom,bt-vdd-io-config      = <1200000 1200000 0 1 1>;
-		qcom,bt-vdd-aon-config     = <1800000 1800000 0 1 1>;
-		qcom,bt-vdd-rfacmn-config  = <864000 1100000 0 1 1>;
-		qcom,bt-vdd-dig-config     = <864000 1100000 0 1 1>;
-		qcom,bt-vdd-rfa-0p8-config = <1050000 2000000 0 1 1>;
-		qcom,bt-vdd-rfa1-config    = <1840000 2100000 0 1 1>;
-		qcom,bt-vdd-rfa2-config    = <1256000 1400000 0 1 1>;
+		qcom,bt-vdd-io-config      = <1800000 2000000 0 1 1>;
+		qcom,bt-vdd-aon-config     = <1800000 2000000 0 1 0>;
+		qcom,bt-vdd-rfacmn-config  = <880000 1100000 0 1 0>;
+		qcom,bt-vdd-dig-config     = <880000 1100000 0 1 0>;
+		qcom,bt-vdd-rfa-0p8-config = <1050000 2000000 0 1 0>;
+		qcom,bt-vdd-rfa1-config    = <1856000 2100000 0 1 0>;
+		qcom,bt-vdd-rfa2-config    = <1256000 1400000 0 1 0>;
 		qcom,bt-vdd-ipa-2p2-config = <2156000 2700000 0 1 1>;
 	};
 };
