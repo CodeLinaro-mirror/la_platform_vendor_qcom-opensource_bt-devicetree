@@ -1,3 +1,7 @@
+ifeq ($(CONFIG_ARCH_X1P42100), y)
+dtbo-y += x1p42100-kiwi-bt.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_CANOE), y)
 dtbo-y += canoe-peach-bt.dtbo
 dtbo-y += canoe-wcn786x-bt.dtbo
@@ -20,6 +24,21 @@ endif
 
 ifeq ($(CONFIG_ARCH_RAVELIN), y)
 dtbo-y += ravelin-bt.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_ALOR), y)
+dtbo-y += alor-peach-bt.dtbo
+dtbo-y += alor-wcn7750-bt.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_TUNA),y)
+dtbo-y += tuna-wcn7750-bt.dtbo
+dtbo-y += tuna-kiwi-bt.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_KERA), y)
+dtbo-y += kera-qca6750-bt.dtbo
+dtbo-y += kera-wcn7750-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_PARROT), y)
