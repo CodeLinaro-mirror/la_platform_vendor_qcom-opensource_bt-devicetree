@@ -101,6 +101,13 @@
 };
 
 //spi instance
-//&qupv3_se2_spi {
-//	status = "ok";
-//};
+&qupv3_se2_spi {
+	status = "ok";
+	spi_cnss {
+		compatible = "qcom,spi-cnss";
+		reg = <0>;
+		spi-max-freq = <32000000>;
+		interrupt-parent = <&tlmm>;
+		qcom,irq-gpio = <&tlmm 14 0>;
+	};
+};
