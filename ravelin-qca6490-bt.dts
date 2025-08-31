@@ -1,0 +1,17 @@
+
+/* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ *  SPDX-License-Identifier: BSD-3-Clause
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "ravelin-qca6490-bt.dtsi"
+
+/ {
+ 	model = "Qualcomm Technologies, Inc. Ravelin";
+ 	compatible = "qcom,ravelin", "qcom,montague-idp", "qcom,montague", "qcom,idp", "qcom,montague-qmb";
+ 	qcom,msm-id = <581 0x10000>;
+        qcom,board-id = <33 0>,<34 0>, <0x1000B 0>, <34 0x601>,  <0x1000B 0x600>, <34 2>, <0x10022 0x4>;
+};
+
