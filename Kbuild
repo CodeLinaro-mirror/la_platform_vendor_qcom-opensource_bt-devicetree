@@ -51,6 +51,10 @@ dtbo-y += alor-peach-bt.dtbo
 dtbo-y += alor-wcn7750-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_X1E80100), y)
+dtbo-y += x1e80100-kiwi-bt.dtbo
+endif
+
 always-y        := $(dtb-y) $(dtbo-y)
 subdir-y        := $(dts-dirs)
 clean-files     := *.dtb *.dtbo
