@@ -14,10 +14,12 @@ endif
 ifeq ($(CONFIG_ARCH_VOLCANO), y)
 dtbo-y += volcano-bt.dtbo
 dtbo-y += volcano-wcn786x-bt.dtbo
+dtbo-y += volcano-wcn6450-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_RAVELIN),y)
 dtbo-y += ravelin-qca6490-bt.dtbo
+dtbo-y += ravelin-wcn6750.dtbo
 endif
 
 always-y        := $(dtb-y) $(dtbo-y)
