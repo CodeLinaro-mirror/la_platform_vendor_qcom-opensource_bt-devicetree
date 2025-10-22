@@ -29,11 +29,6 @@ ifeq ($(CONFIG_ARCH_RAVELIN), y)
 dtbo-y += ravelin-bt.dtbo
 endif
 
-ifeq ($(CONFIG_ARCH_ALOR), y)
-dtbo-y += alor-peach-bt.dtbo
-dtbo-y += alor-wcn7750-bt.dtbo
-endif
-
 ifeq ($(CONFIG_ARCH_TUNA),y)
 dtbo-y += tuna-wcn7750-bt.dtbo
 dtbo-y += tuna-kiwi-bt.dtbo
