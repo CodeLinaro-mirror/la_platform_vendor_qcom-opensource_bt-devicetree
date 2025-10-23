@@ -53,6 +53,11 @@ ifeq ($(CONFIG_ARCH_X1E80100), y)
 dtbo-y += x1e80100-kiwi-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_CHORA), y)
+dtbo-y += chora-wcn6450-bt.dtbo
+dtbo-y += chora-wcn7750-bt.dtbo
+endif
+
 always-y        := $(dtb-y) $(dtbo-y)
 subdir-y        := $(dts-dirs)
 clean-files     := *.dtb *.dtbo
