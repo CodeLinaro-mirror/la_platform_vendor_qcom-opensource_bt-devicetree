@@ -20,6 +20,7 @@ endif
 ifeq ($(CONFIG_ARCH_RAVELIN),y)
 dtbo-y += ravelin-qca6490-bt.dtbo
 dtbo-y += ravelin-wcn6750.dtbo
+dtbo-y += ravelin-wcn3990-bt.dtbo
 endif
 
 always-y        := $(dtb-y) $(dtbo-y)
