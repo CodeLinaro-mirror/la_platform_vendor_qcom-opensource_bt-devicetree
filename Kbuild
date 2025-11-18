@@ -35,12 +35,14 @@ ifeq ($(CONFIG_QTI_QUIN_GVM),y)
 dtbo-y += direwolf-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_NORD), y)
 ifeq ($(CONFIG_ARCH_QTI_VM),y)
 dtbo-y += sa8797p-gunyah-vm-bt.dtbo
 dtbo-y += sa8797p-gunyah-vm-bt-secondary.dtbo
+dtbo-y += sa8797p-la-vm-bt.dtbo
+dtbo-y += sa8797p-la-vm-bt-secondary.dtbo
 endif
-
-$(info [Kbuild:zyanfei] dtbo-y = $(dtbo-y))
+endif
 
 always-y        := $(dtb-y) $(dtbo-y)
 subdir-y        := $(dts-dirs)
