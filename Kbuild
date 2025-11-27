@@ -39,6 +39,10 @@ dtbo-y += kera-qca6750-bt.dtbo
 dtbo-y += kera-wcn7750-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_KHAJE),y)
+dtbo-y += khaje-bt.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_PARROT), y)
 dtbo-y += parrot-wcn3990-bt.dtbo
 dtbo-y += parrot-wcn6750-bt.dtbo
