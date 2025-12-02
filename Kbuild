@@ -23,8 +23,14 @@ ifeq (y, $(filter y, $(CONFIG_ARCH_SA8195) $(CONFIG_QTI_QUIN_GVM)))
 dtbo-y += sa8195p-bt.dtbo
 endif
 
-ifeq (y, $(filter y, $(CONFIG_ARCH_LEMANS) $(CONFIG_QTI_QUIN_GVM)))
+ifeq ($(CONFIG_ARCH_LEMANS), y)
+ifeq ($(CONFIG_QTI_QUIN_GVM),y)
 dtbo-y += lemans-bt.dtbo
+else
+ifeq ($(CONFIG_ARCH_QTI_VM),y)
+dtbo-y += lemans-gunyah-vm-bt.dtbo
+endif
+endif
 endif
 
 ifneq (,$(filter y,$(CONFIG_QTI_QUIN_GVM) $(CONFIG_ARCH_QTI_VM)))
