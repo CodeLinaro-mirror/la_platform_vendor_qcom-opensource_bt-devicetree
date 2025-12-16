@@ -7,9 +7,9 @@
 #include <dt-bindings/interconnect/qcom,chora.h>
 #include <dt-bindings/clock/qcom,rpmh.h>
 
-&pm8550vs_gpios {  
+&pm8550vs_c_gpios {
 	bt_en: bt_en {
-		pins = "gpio3";  
+		pins = "gpio3";
 		function = "normal";
 		input-disable;
 		output-enable;
@@ -17,12 +17,21 @@
 		power-source = <1>;
 	};
 	bt_fmd_clk_en: bt_fmd_clk_en {
-		pins = "gpio4"; 
+		pins = "gpio4";
 		function = "normal";
 		input-enable;
 		output-disable;
 		bias-disable;
 		power-source = <1>;
+	};
+};
+
+&tlmm {
+	cnss_bt_sw_ctrl: cnss_wlan_sw_ctrl {
+		mux {
+			pins = "gpio40";
+			function = "wcn_sw_ctrl";
+		};
 	};
 };
 
@@ -47,7 +56,8 @@
 
 		mpm_wake_set_gpios = <40>; /* WCN_SW_CTRL */
 
-		qcom,bt-reset-gpio = <&pm8550vs_gpios 3 0>; /* WLAN_BT Bluetooth Enable */
+		qcom,bt-reset-gpio = <&pm8550vs_c_gpios 3 0>; /* WLAN_BT Bluetooth Enable */
+		qcom,bt-fmd-clk-gpio = <&pm8550vs_c_gpios 4 0>; /* FMD_CLK_CTRL */
 		qcom,bt-sw-ctrl-gpio = <&tlmm 40 0>;   /* WCN_SW_CTRL */
 		qcom,wl-reset-gpio = <&tlmm 41 0>;     /* WLAN_EN */
 		qcom,wl-resetb-gpio = <&tlmm 48 0>;    /* EVROS_RESETB */
@@ -62,20 +72,18 @@
 		qcom,bt-vdd-pa-supply = <&L14B>;       /* WCN_PA_2G_3P3 - PA 2G 3.3V LDO */
 		qcom,bt-vdd-pa-5g-supply = <&L15B>;    /* WCN_PA_5G_3P3 - PA 5G 3.3V LDO */
 
-		qcom,bt-vdd-io-config = <1800000 1980000 0 1>;
-		qcom,bt-vdd-aon-config = <920000 2744000 0 1>;
-		qcom,bt-vdd-dig-config  = <920000 2744000 0 1>;
-		qcom,bt-vdd-rfa-0p8-config = <920000 2744000 0 1>;
-		qcom,bt-vdd-rfa1-config = <1816000 2040000 0 1>;
-		qcom,bt-vdd-rfa2-config = <1256000 2100000 0 1>;
-		qcom,bt-vdd-pa-config = <3125000 3465000 0 1>;
-		qcom,bt-vdd-pa-5g-config = <3125000 3465000 0 1>;
+		qcom,bt-vdd-io-config = <1800000 1980000 0 1 1>;
+		qcom,bt-vdd-aon-config = <920000 1100000 0 1 1>;
+		qcom,bt-vdd-dig-config  = <920000 1100000 0 1 1>;
+		qcom,bt-vdd-rfa-0p8-config = <920000 1100000 0 1 1>;
+		qcom,bt-vdd-rfa1-config = <1856000 2040000 0 1 1>;
+		qcom,bt-vdd-rfa2-config = <1256000 1408000 0 1 1>;
+		qcom,bt-vdd-pa-config = <3125000 3465000 0 1 1>;
+		qcom,bt-vdd-pa-5g-config = <3125000 3465000 0 1 1>;
 
-
-		qcom,pdc_init_table;//pending from wlan
 	};
 };
 
-&qupv3_se11_4uart {  
+&qupv3_se11_4uart {
 	status = "ok";
 };

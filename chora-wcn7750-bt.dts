@@ -16,7 +16,7 @@
 			"qcom,chora-qrd", "qcom,chorap-qrd","qcom,qrd",
 			"qcom,chora-rcm", "qcom,chorap-rcm","qcom,rcm";
 	qcom,msm-id = <724 0x10000>, <744 0x10000>;
-	qcom,board-id = <33 0>, <1 0>, <8 0>, <11 0>, <21 0>,
+	qcom,board-id = <1 0>, <8 0>, <11 0>, <21 0>,
 			<0x20001 0x0>, <0x20008 0x0>,
 			<0x2000b 0x0>, <0x20015 0x0>;
 
