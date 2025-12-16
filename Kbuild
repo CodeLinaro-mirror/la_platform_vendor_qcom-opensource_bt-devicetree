@@ -56,6 +56,8 @@ endif
 ifeq ($(CONFIG_ARCH_CHORA), y)
 dtbo-y += chora-wcn6450-bt.dtbo
 dtbo-y += chora-wcn7750-bt.dtbo
+dtbo-y += chora-wcn6450-Bonefish-bt.dtbo
+dtbo-y += chora-wcn7750-Bonefish-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SERAPH),y)
