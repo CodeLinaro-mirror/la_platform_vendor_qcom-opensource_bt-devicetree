@@ -63,14 +63,14 @@
 		qcom,bt-vdd-rfa1p8-supply  = <&S4D>;  /* RFA_1P8 */
 		qcom,bt-vdd-rfa1p25-supply = <&S4F>; /* RFA_1P2 */
 
-		qcom,bt-vdd18-aon-config   = <1800000 1800000 30000 1 1>;
-		qcom,bt-vdd12-io-config    = <1200000 1200000 30000 1 1>;
-		qcom,bt-ant-ldo-config     = <1800000 2000000 0 1 1>;
+		qcom,bt-vdd18-aon-config   = <1800000 1800000 30000 1 0>;
+		qcom,bt-vdd12-io-config    = <1200000 1200000 30000 1 0>;
+		qcom,bt-ant-ldo-config     = <1800000 2000000 0 1 0>;
 		qcom,bt-vdd-aon-config     = <700000 1352000 0 1 1>;
 		qcom,bt-vdd-dig-config     = <700000 1352000 0 1 1>;
 		qcom,bt-vdd-rfa0p75-config = <700000 1352000 0 1 1>;
-		qcom,bt-vdd-rfa1p8-config  = <1876000 2100000 0 1 1>;
-		qcom,bt-vdd-rfa1p25-config = <1328000 1400000 0 1 1>;
+		qcom,bt-vdd-rfa1p8-config  = <1876000 2100000 0 1 0>;
+		qcom,bt-vdd-rfa1p25-config = <1328000 1400000 0 1 0>;
 
 		/* WLAN CX regulator for FMD feature */
 		qcom,bt-vdd-wlan-aon-supply = <&S3D>;
