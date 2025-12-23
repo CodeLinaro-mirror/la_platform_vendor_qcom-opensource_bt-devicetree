@@ -53,6 +53,10 @@ dtbo-y += alor-peach-bt.dtbo
 dtbo-y += alor-wcn7750-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_LAHAINA), y)
+dtbo-y += yupik-wcn6750-bt.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_X1E80100), y)
 dtbo-y += x1e80100-kiwi-bt.dtbo
 endif
