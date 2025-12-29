@@ -24,12 +24,9 @@ dtbo-y += sa8195p-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_LEMANS), y)
-ifeq ($(CONFIG_QTI_QUIN_GVM),y)
-dtbo-y += lemans-bt.dtbo
-else
 ifeq ($(CONFIG_ARCH_QTI_VM),y)
+dtbo-y += lemans-bt.dtbo
 dtbo-y += lemans-gunyah-vm-bt.dtbo
-endif
 endif
 endif
 
