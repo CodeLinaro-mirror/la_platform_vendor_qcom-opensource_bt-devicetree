@@ -10,7 +10,7 @@
 
 / {
 	model = "Qualcomm Technologies, Inc. Chora SoC ";
-	compatible = "qcom,chora", "qcom,chorap", 
+	compatible = "qcom,chora", "qcom,chorap",
 			"qcom,chora-atp", "qcom,chorap-atp", "qcom,atp",
 			"qcom,chora-cdp", "qcom,chorap-cdp", "qcom,cdp",
 			"qcom,chora-mtp", "qcom,chorap-mtp", "qcom,mtp",

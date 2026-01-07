@@ -7,9 +7,9 @@
 #include <dt-bindings/interconnect/qcom,chora.h>
 #include <dt-bindings/clock/qcom,rpmh.h>
 
-&pm8550vs_c_gpios {
+&pmxr2230_gpios {
 	bt_en: bt_en {
-		pins = "gpio3";
+		pins = "gpio1";
 		function = "normal";
 		input-disable;
 		output-enable;
@@ -17,7 +17,7 @@
 		power-source = <1>;
 	};
 	bt_fmd_clk_en: bt_fmd_clk_en {
-		pins = "gpio4";
+		pins = "gpio2";
 		function = "normal";
 		input-enable;
 		output-disable;
@@ -56,8 +56,8 @@
 
 		mpm_wake_set_gpios = <40>; /* WCN_SW_CTRL */
 
-		qcom,bt-reset-gpio = <&pm8550vs_c_gpios 3 0>; /* WLAN_BT Bluetooth Enable */
-		qcom,bt-fmd-clk-gpio = <&pm8550vs_c_gpios 4 0>; /* FMD_CLK_CTRL */
+		qcom,bt-reset-gpio = <&pmxr2230_gpios 1 0>; /* WLAN_BT Bluetooth Enable */
+		qcom,bt-fmd-clk-gpio = <&pmxr2230_gpios 2 0>; /* FMD_CLK_CTRL */
 		qcom,bt-sw-ctrl-gpio = <&tlmm 40 0>;   /* WCN_SW_CTRL */
 		qcom,wl-reset-gpio = <&tlmm 41 0>;     /* WLAN_EN */
 		qcom,wl-resetb-gpio = <&tlmm 48 0>;    /* EVROS_RESETB */
@@ -81,13 +81,6 @@
 		qcom,bt-vdd-pa-config = <3125000 3465000 0 1 1>;
 		qcom,bt-vdd-pa-5g-config = <3125000 3465000 0 1 1>;
 
-	};
-};
-
-&swr4 {
-	btswr_slave: btswr-slave {
-		compatible = "qcom,btfmswr_slave";
-		reg = <0x01 0x08170220>;
 	};
 };
 
