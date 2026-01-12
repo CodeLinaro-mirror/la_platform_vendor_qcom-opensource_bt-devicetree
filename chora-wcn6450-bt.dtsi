@@ -76,6 +76,13 @@
 	};
 };
 
-&qupv3_se11_4uart {  
+&swr4 {
+	btswr_slave: btswr-slave {
+		compatible = "qcom,btfmswr_slave";
+		reg = <0x01 0x08170220>;
+	};
+};
+
+&qupv3_se11_4uart {
 	status = "ok";
 };
