@@ -64,6 +64,10 @@ dtbo-y += chora-wcn6450-Bonefish-bt.dtbo
 dtbo-y += chora-wcn7750-Bonefish-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_MALABAR), y)
+dtbo-y += malabar-bt.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_SERAPH),y)
 dtbo-y += seraph-bt.dtbo
 endif
