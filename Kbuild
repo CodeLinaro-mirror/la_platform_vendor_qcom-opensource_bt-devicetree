@@ -47,6 +47,7 @@ endif
 ifeq ($(CONFIG_ARCH_ALOR), y)
 dtbo-y += alor-peach-bt.dtbo
 dtbo-y += alor-wcn7750-bt.dtbo
+dtbo-y += alor-mtp-wcn786x-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_X1E80100), y)
