@@ -74,6 +74,7 @@ endif
 
 ifeq ($(CONFIG_ARCH_SERAPH),y)
 dtbo-y += seraph-bt.dtbo
+dtbo-y += seraph-qar-bt.dtbo
 endif
 
 always-y        := $(dtb-y) $(dtbo-y)
