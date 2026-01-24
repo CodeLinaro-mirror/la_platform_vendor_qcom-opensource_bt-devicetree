@@ -7,17 +7,17 @@
 #include <dt-bindings/interconnect/qcom,chora.h>
 #include <dt-bindings/clock/qcom,rpmh.h>
 
-&pm8550vs_c_gpios {
+&pmxr2230_gpios {
 	bt_en: bt_en {
-		pins = "gpio3";
+		pins = "gpio1";
 		function = "normal";
 		input-disable;
 		output-enable;
 		bias-disable;
-		power-source = <2>;
+		power-source = <1>;
 	};
 	bt_fmd_clk_en: bt_fmd_clk_en {
-		pins = "gpio4";
+		pins = "gpio2";
 		function = "normal";
 		input-enable;
 		output-disable;
@@ -57,8 +57,8 @@
 		mpm_wake_set_gpios   = <40>;
 		qcom,wl-reset-gpio   = <&tlmm 41 0>; /* WL_EN */
 		qcom,bt-sw-ctrl-gpio = <&tlmm 40 0>; /* SW_CTRL */
-		qcom,bt-reset-gpio   = <&pm8550vs_c_gpios 3 0>; /* BT_EN */
-		qcom,bt-fmd-clk-gpio = <&pm8550vs_c_gpios 4 0>; /* FMD_CLK_CTRL */
+		qcom,bt-reset-gpio   = <&pmxr2230_gpios 1 0>; /* BT_EN */
+		qcom,bt-fmd-clk-gpio = <&pmxr2230_gpios 2 0>; /* FMD_CLK_CTRL */
 
 		/* List of GPIOs to be setup for interrupt wakeup capable*/
 		qcom,bt-vdd-io-supply      = <&L1B>;  	/* VDD_PX_1P8_ALT - 1.8V IO LDO */
