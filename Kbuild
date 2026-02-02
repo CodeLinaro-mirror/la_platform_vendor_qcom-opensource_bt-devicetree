@@ -39,6 +39,10 @@ dtbo-y += kera-qca6750-bt.dtbo
 dtbo-y += kera-wcn7750-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_KHAJE),y)
+dtbo-y += khaje-bt.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_PARROT), y)
 dtbo-y += parrot-wcn3990-bt.dtbo
 dtbo-y += parrot-wcn6750-bt.dtbo
@@ -50,6 +54,10 @@ dtbo-y += alor-wcn7750-bt.dtbo
 dtbo-y += alor-mtp-wcn786x-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_LAHAINA), y)
+dtbo-y += yupik-wcn6750-bt.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_X1E80100), y)
 dtbo-y += x1e80100-kiwi-bt.dtbo
 endif
@@ -59,6 +67,10 @@ dtbo-y += chora-wcn6450-bt.dtbo
 dtbo-y += chora-wcn7750-bt.dtbo
 dtbo-y += chora-wcn6450-Bonefish-bt.dtbo
 dtbo-y += chora-wcn7750-Bonefish-bt.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_MALABAR), y)
+dtbo-y += malabar-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SERAPH),y)
