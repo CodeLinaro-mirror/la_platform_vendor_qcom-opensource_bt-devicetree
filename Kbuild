@@ -51,6 +51,7 @@ endif
 ifeq ($(CONFIG_ARCH_ALOR), y)
 dtbo-y += alor-peach-bt.dtbo
 dtbo-y += alor-wcn7750-bt.dtbo
+dtbo-y += alor-mtp-wcn786x-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_LAHAINA), y)
@@ -74,6 +75,7 @@ endif
 
 ifeq ($(CONFIG_ARCH_SERAPH),y)
 dtbo-y += seraph-bt.dtbo
+dtbo-y += seraph-qar-bt.dtbo
 endif
 
 always-y        := $(dtb-y) $(dtbo-y)
