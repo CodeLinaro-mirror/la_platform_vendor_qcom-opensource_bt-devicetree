@@ -16,6 +16,7 @@
 			pins = "gpio8";
 			output-low;
 			bias-pull-down;
+			power-source = <1>; /* 0: 3.3v, 1: 1.8v */
 		};
 	};
 };
