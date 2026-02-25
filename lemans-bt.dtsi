@@ -14,6 +14,7 @@
 
 		config {
 			pins = "gpio8";
+			output-low;
 			bias-pull-down;
 		};
 	};
