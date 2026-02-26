@@ -25,6 +25,6 @@
 	};
 };
 
-&qupv3_se8_4uart {
+&uart8 {
     status = "ok";
 };
