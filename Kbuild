@@ -38,6 +38,7 @@ endif
 ifeq ($(CONFIG_ARCH_KERA), y)
 dtbo-y += kera-qca6750-bt.dtbo
 dtbo-y += kera-wcn7750-bt.dtbo
+dtbo-y += kera-wcn7760-bt-evk.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_KHAJE),y)
