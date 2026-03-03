@@ -72,10 +72,6 @@ ifeq ($(CONFIG_ARCH_MALABAR), y)
 dtbo-y += malabar-bt.dtbo
 endif
 
-ifeq ($(CONFIG_ARCH_MALABAR), y)
-dtbo-y += malabar-bt.dtbo
-endif
-
 ifeq ($(CONFIG_ARCH_SERAPH),y)
 dtbo-y += seraph-bt.dtbo
 endif
