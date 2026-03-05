@@ -1,0 +1,15 @@
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * SPDX-License-Identifier: BSD-3-Clause.
+ */
+
+#include <dt-bindings/interconnect/qcom,monaco_auto.h>
+
+&soc {
+	bluetooth: bt-qca-auto-converged {
+		compatible = "qcom,qca-auto-converged";
+		qcom,firmware-managed-resources;
+		power-domains = <&scmi_power 8>, <&scmi_power 9>;
+		power-domain-names = "bt_regulator", "bt_gpio";
+	};
+};
