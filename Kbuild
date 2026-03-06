@@ -82,6 +82,10 @@ dtbo-y += seraph-bt.dtbo
 dtbo-y += seraph-qar-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_PIKACHU), y)
+dtbo-y += pikachu-wcn786x-bt.dtbo
+endif
+
 always-y        := $(dtb-y) $(dtbo-y)
 subdir-y        := $(dts-dirs)
 clean-files     := *.dtb *.dtbo
