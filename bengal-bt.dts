@@ -9,6 +9,7 @@
 #include "bengal-bt.dtsi"
 / {
 	model = "Qualcomm Technologies, Inc. Bengal";
-	compatible = "qcom,bengal";
-	qcom,board-id = <0 0>;
+	compatible = "qcom,scuba-idp", "qcom,scuba-iot", "qcom,idp", "qcom,bengal";
+	qcom,msm-id = <474 0x10000>, <473 0x10000>;
+	qcom,board-id = <34 0>;
 };
