@@ -10,8 +10,8 @@
 
 / {
 	model = "Qualcomm Technologies, Inc. SeraphP QAR";
-	compatible = "qcom,seraphp-qar", "qcom,seraphp", "qcom,qar";
-	qcom,msm-id = <673 0x10000>;
+	compatible = "qcom,seraphp-qar", "qcom,seraphp", "qcom,qar", "qcom,seraphp-v1.1-qar";
+	qcom,msm-id = <673 0x10000>, <673 0x10001>;
 	qcom,board-id = <0x1002C 0>, <0x1002C 1>;
 };
 
