@@ -32,7 +32,6 @@ endif
 
 ifneq (,$(filter y,$(CONFIG_QTI_QUIN_GVM) $(CONFIG_ARCH_QTI_VM)))
 dtbo-y += monaco-bt.dtbo
-dtbo-y += monaco-gunyah-vm-bt.dtbo
 endif
 
 ifeq ($(CONFIG_QTI_QUIN_GVM),y)
