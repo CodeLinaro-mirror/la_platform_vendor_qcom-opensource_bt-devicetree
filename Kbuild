@@ -43,6 +43,10 @@ ifeq ($(CONFIG_ARCH_KHAJE),y)
 dtbo-y += khaje-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_BENGAL), y)
+dtbo-y += bengal-bt.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_PARROT), y)
 dtbo-y += parrot-wcn3990-bt.dtbo
 dtbo-y += parrot-wcn6750-bt.dtbo
