@@ -80,6 +80,11 @@ dtbo-y += chora-wcn7750-Bonefish-bt.dtbo
 dtbo-y += ravelin-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_BOURTZI), y)
+dtbo-y += bourtzi-wcn3990-bt.dtbo
+dtbo-y += bourtzi-wcn6450-bt.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_MALABAR), y)
 dtbo-y += malabar-bt.dtbo
 endif
