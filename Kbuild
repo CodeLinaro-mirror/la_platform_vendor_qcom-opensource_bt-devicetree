@@ -56,6 +56,7 @@ endif
 
 ifeq ($(CONFIG_ARCH_LAHAINA), y)
 dtbo-y += yupik-wcn6750-bt.dtbo
+dtbo-y += lahaina-qca6490-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_X1E80100), y)
