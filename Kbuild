@@ -47,6 +47,12 @@ dtbo-y += sa8797p-la-vm-bt-secondary.dtbo
 endif
 endif
 
+ifeq ($(CONFIG_ARCH_SECA), y)
+ifeq ($(CONFIG_ARCH_QTI_VM),y)
+dtbo-y += sa8787p-gunyah-vm-bt.dtbo
+endif
+endif
+
 always-y        := $(dtb-y) $(dtbo-y)
 subdir-y        := $(dts-dirs)
 clean-files     := *.dtb *.dtbo
