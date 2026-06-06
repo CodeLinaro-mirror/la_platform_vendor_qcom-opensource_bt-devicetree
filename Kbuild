@@ -67,6 +67,7 @@ dtbo-y += chora-wcn6450-bt.dtbo
 dtbo-y += chora-wcn7750-bt.dtbo
 dtbo-y += chora-wcn6450-Bonefish-bt.dtbo
 dtbo-y += chora-wcn7750-Bonefish-bt.dtbo
+dtbo-y += ravelin-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_BOURTZI), y)
@@ -86,4 +87,3 @@ endif
 always-y        := $(dtb-y) $(dtbo-y)
 subdir-y        := $(dts-dirs)
 clean-files     := *.dtb *.dtbo
-
