@@ -1,21 +1,22 @@
 // SPDX-License-Identifier: BSD-3-Clause
-
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
 #include <dt-bindings/interrupt-controller/arm-gic.h>
-#include <dt-bindings/gpio/gpio.h>
-#include <dt-bindings/interconnect/qcom,ravelin.h>
+#include <dt-bindings/clock/qcom,rpmcc.h>
+#include <dt-bindings/spmi/spmi.h>
+#include <dt-bindings/regulator/qcom,rpmh-regulator-levels.h>
 
 &soc {
+
 	bluetooth: bt_wcn3990 {
 		compatible = "qcom,wcn3990";
-		qcom,bt-sw-ctrl-gpio = <&tlmm 56 GPIO_ACTIVE_HIGH>;
-		qcom,bt-vdd-io-supply = <&L21B>;
-		qcom,bt-vdd-core-supply = <&L14B>;
-		qcom,bt-vdd-pa-supply = <&L7E>;
-		qcom,bt-vdd-xtal-supply = <&L23B>;
+		qcom,bt-sw-ctrl-gpio = <&tlmm 87 0>;
+		qcom,bt-vdd-io-supply = <&L9A>;    /* IO */
+		qcom,bt-vdd-core-supply = <&L17A>; /* RFA */
+		qcom,bt-vdd-pa-supply = <&L23A>; /* CH0 */
+		qcom,bt-vdd-xtal-supply = <&L16A>; /* XO */
 
 		qcom,bt-vdd-io-config = <1700000 1900000 1 0>;
 		qcom,bt-vdd-core-config = <1304000 1304000 1 0>;
@@ -23,7 +24,7 @@
 		qcom,bt-vdd-xtal-config = <1700000 1900000 1 0>;
 	};
 
-	slim_msm: slim@3340000 {
+	slim_msm: slim@a5c0000 {
 		status =  "ok";
 		ngd@1 {
 			reg = <1>;
@@ -33,15 +34,12 @@
 			slimbus: btfmslim-driver {
 				compatible = "slim217,221";
 				reg = <1 0>;
-				qcom,btslim-address  = <0x0>; /* BT SLIM EP address*/
-				qcom,btslimtx-channels = <159 160>;
-				qcom,btslimrx-channels = <157 158>;
 			};
 		};
 	};
 };
 
 //uart instance
-&qupv3_se2_4uart {
+&qupv3_se3_4uart {
 	status = "ok";
 };
