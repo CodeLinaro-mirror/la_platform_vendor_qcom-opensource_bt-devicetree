@@ -14,6 +14,9 @@
             qcom,bt-reset-gpio = <&tlmm 32 0>; /* BT_EN */
             qcom,bt-sw-ctrl-gpio = <&tlmm 33 0>; /* SW_CTRL */
 
+            /* Disable passthrough mode for HCI arbiter */
+                qcom,bt-passthrough-enable = <0>;
+
             qcom,bt-vdd18-aon-supply  = <&L3A>; /* VDD1P8_AON */
             qcom,bt-vdd12-io-supply   = <&L13A>;/* VDD1P2_IO */
             qcom,bt-vdd-dig-supply    = <&S3A>; /* BT CX_MX LDO */
