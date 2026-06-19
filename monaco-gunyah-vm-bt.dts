@@ -1,0 +1,16 @@
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * SPDX-License-Identifier: BSD-3-Clause.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "monaco-gunyah-vm-bt.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Monaco IVI ADAS QAM Gunyah VM";
+	compatible = "qcom,monaco", "qcom,qam";
+	qcom,msm-id = <606 0x10000>;
+	qcom,board-id = <0x10019 0x0>;
+};

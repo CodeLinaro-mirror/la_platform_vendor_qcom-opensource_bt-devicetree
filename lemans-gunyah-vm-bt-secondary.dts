@@ -1,0 +1,16 @@
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * SPDX-License-Identifier: BSD-3-Clause.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "lemans-gunyah-vm-bt-secondary.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Lemans IVI ADAS QAM Gunyah VM";
+	compatible = "qcom,lemans", "qcom,qam", "qcom,cob";
+	qcom,board-id = <0x10025 0x0>;
+	qcom,msm-id = <532 0x10000>, <532 0x20000>;
+};

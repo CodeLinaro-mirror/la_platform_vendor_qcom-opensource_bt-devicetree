@@ -27,11 +27,13 @@ ifeq ($(CONFIG_ARCH_LEMANS), y)
 ifeq ($(CONFIG_ARCH_QTI_VM),y)
 dtbo-y += lemans-bt.dtbo
 dtbo-y += lemans-gunyah-vm-bt.dtbo
+dtbo-y += lemans-gunyah-vm-bt-secondary.dtbo
 endif
 endif
 
 ifneq (,$(filter y,$(CONFIG_QTI_QUIN_GVM) $(CONFIG_ARCH_QTI_VM)))
 dtbo-y += monaco-bt.dtbo
+dtbo-y += monaco-gunyah-vm-bt.dtbo
 endif
 
 ifeq ($(CONFIG_QTI_QUIN_GVM),y)
