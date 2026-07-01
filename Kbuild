@@ -51,6 +51,7 @@ endif
 
 ifeq ($(CONFIG_ARCH_QTI_VM),y)
 dtbo-y += sa8787p-gunyah-vm-bt.dtbo
+dtbo-y += sa8787p-la-vm-bt.dtbo
 endif
 
 always-y        := $(dtb-y) $(dtbo-y)
