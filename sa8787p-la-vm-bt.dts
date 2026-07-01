@@ -1,0 +1,16 @@
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * SPDX-License-Identifier: BSD-3-Clause.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "sa8787p-la-vm-bt.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. SA8787p Single LA  Guest Virtual Machine";
+	compatible = "qcom,sa8787p", "qcom,quinvm";
+	qcom,msm-id = <742 0x10000>, <742 0x10001>;
+	qcom,board-id = <0x0 0x1000001>;
+};
