@@ -9,6 +9,6 @@
  / {
 	model = "Qualcomm Technologies, Inc. Ravelin ATP";
 	compatible = "qcom,ravelin", "qcom,ravelin-atp", "qcom,atp", "qcom,ravelin-idp", "qcom,idp", "qcom,ravelin-qrd", "qcom,qrd";
-	qcom,msm-id = <568 0x10000>, <602 0x10000>, <653 0x10000>, <654 0x10000>, <734 0x10000>, <773 0x10000>, <774 0x10000>;
+	qcom,msm-id = <568 0x10000>, <581 0x10000>, <582 0x10000>, <602 0x10000>, <653 0x10000>, <654 0x10000>, <734 0x10000>, <773 0x10000>, <774 0x10000>;
 	qcom,board-id = <33 0>, <34 0>, <34 0x601>, <34 2>, <0x10022 0x0>, <0x10022 0x1>, <0x10022 0x2>, <0x10022 0x8>, <0x1000B 0>, <0x1000B 0x600>;
 };
