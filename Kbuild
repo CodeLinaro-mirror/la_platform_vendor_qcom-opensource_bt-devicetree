@@ -31,16 +31,26 @@ endif
 
 ifeq ($(CONFIG_ARCH_TUNA),y)
 dtbo-y += tuna-wcn7750-bt.dtbo
+dtbo-y += tuna-wcn7750-no-L6K.dtbo
 dtbo-y += tuna-kiwi-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_KERA), y)
 dtbo-y += kera-qca6750-bt.dtbo
 dtbo-y += kera-wcn7750-bt.dtbo
+dtbo-y += kera-wcn7760-bt-evk.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_KHAJE),y)
 dtbo-y += khaje-bt.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_BENGAL), y)
+dtbo-y += bengal-bt.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_SCUBA),y)
+dtbo-y += scuba-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_PARROT), y)
@@ -68,6 +78,12 @@ dtbo-y += chora-wcn6450-bt.dtbo
 dtbo-y += chora-wcn7750-bt.dtbo
 dtbo-y += chora-wcn6450-Bonefish-bt.dtbo
 dtbo-y += chora-wcn7750-Bonefish-bt.dtbo
+dtbo-y += ravelin-bt.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_BOURTZI), y)
+dtbo-y += bourtzi-wcn3990-bt.dtbo
+dtbo-y += bourtzi-wcn6450-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_MALABAR), y)
@@ -79,7 +95,10 @@ dtbo-y += seraph-bt.dtbo
 dtbo-y += seraph-qar-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_PIKACHU), y)
+dtbo-y += pikachu-wcn786x-bt.dtbo
+endif
+
 always-y        := $(dtb-y) $(dtbo-y)
 subdir-y        := $(dts-dirs)
 clean-files     := *.dtb *.dtbo
-
