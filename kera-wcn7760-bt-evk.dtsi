@@ -31,8 +31,7 @@
 	};
 
 	i2s_support: i2s_support {
-		compatible = "qcom,btfmi2s_support";
-		enable-I2S;
+		compatible = "qcom,btfmi2s";
 	};
 };
 
