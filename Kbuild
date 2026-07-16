@@ -15,6 +15,7 @@ ifeq ($(CONFIG_ARCH_VOLCANO), y)
 dtbo-y += volcano-bt.dtbo
 dtbo-y += volcano-wcn786x-bt.dtbo
 dtbo-y += volcano-wcn6450-bt.dtbo
+dtbo-y += volcano-moselle-sdr735-wcd9395-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_RAVELIN),y)
