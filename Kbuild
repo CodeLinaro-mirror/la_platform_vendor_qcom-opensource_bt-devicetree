@@ -31,16 +31,26 @@ endif
 
 ifeq ($(CONFIG_ARCH_TUNA),y)
 dtbo-y += tuna-wcn7750-bt.dtbo
+dtbo-y += tuna-wcn7750-no-L6K.dtbo
 dtbo-y += tuna-kiwi-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_KERA), y)
 dtbo-y += kera-qca6750-bt.dtbo
 dtbo-y += kera-wcn7750-bt.dtbo
+dtbo-y += kera-wcn7760-bt-evk.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_KHAJE),y)
 dtbo-y += khaje-bt.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_BENGAL), y)
+dtbo-y += bengal-bt.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_SCUBA),y)
+dtbo-y += scuba-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_PARROT), y)
@@ -56,6 +66,7 @@ endif
 
 ifeq ($(CONFIG_ARCH_LAHAINA), y)
 dtbo-y += yupik-wcn6750-bt.dtbo
+dtbo-y += lahaina-qca6490-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_X1E80100), y)
@@ -82,6 +93,10 @@ endif
 ifeq ($(CONFIG_ARCH_SERAPH),y)
 dtbo-y += seraph-bt.dtbo
 dtbo-y += seraph-qar-bt.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_PIKACHU), y)
+dtbo-y += pikachu-wcn786x-bt.dtbo
 endif
 
 always-y        := $(dtb-y) $(dtbo-y)
