@@ -27,6 +27,7 @@ ifeq ($(CONFIG_ARCH_LEMANS), y)
 ifeq ($(CONFIG_ARCH_QTI_VM),y)
 dtbo-y += lemans-bt.dtbo
 dtbo-y += lemans-gunyah-vm-bt.dtbo
+dtbo-y += lemans-gunyah-vm-bt-secondary.dtbo
 endif
 endif
 
