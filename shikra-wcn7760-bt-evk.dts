@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: BSD-3-Clause
+
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "shikra-wcn7760-bt-evk.dtsi"
+
+/ {
+    model = "Qualcomm Technologies, Inc. Shikra EVK Kunlun NFC M2.0";
+    compatible = "qcom,shikra-cqm", "qcom,shikra-cqs", "qcom,shikra-evk", "qcom,shikra", "qcom,evk", "qcom,shikra-lite-cqm", "qcom,shikra-lite-cqs", "qcom,shikra-lite-evk";
+    qcom,msm-id = <756 0x10000>, <758 0x10000>, <759 0x10000>;
+    qcom,board-id = <0x70033 0x01>, <0x60033 0x01>, <0x80033 0x0>, <0x70033 0x0>;
+};
+
