@@ -9,9 +9,9 @@
 #include "ravelin-qca6490-bt.dtsi"
 
 / {
- 	model = "Qualcomm Technologies, Inc. Ravelin";
+	model = "Qualcomm Technologies, Inc. Montague HSP IDP";
  	compatible = "qcom,ravelin", "qcom,montague-idp", "qcom,montague", "qcom,idp", "qcom,montague-qmb";
 	qcom,msm-id = <581 0x10000>, <582 0x10000>, <734 0x10000>, <773 0x10000>, <774 0x10000>;
-        qcom,board-id = <33 0>,<34 0>, <34 0x601>, <34 2>, <0x10022 0x4>,<0x10022 0x5>, <0x10022 0xA>;
+	qcom,board-id = <0x10022 0x4>, <0x10022 0xA>;
 };
 
