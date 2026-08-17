@@ -29,6 +29,9 @@
 		qcom,bt-reset-gpio   = <&pm8550vs_g_gpios 4 0>; /* WCN_BT_EN */
 
 	};
+	i2s_support: i2s_support {
+		compatible = "qcom,btfmi2s";
+	};
 };
 
 //uart instance
