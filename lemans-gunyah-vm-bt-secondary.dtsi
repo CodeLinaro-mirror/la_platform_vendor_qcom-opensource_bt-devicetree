@@ -1,0 +1,19 @@
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * SPDX-License-Identifier: BSD-3-Clause.
+ */
+
+#include <dt-bindings/interconnect/qcom,lemans.h>
+
+&soc {
+	bluetooth1: bt-qca-auto-secondary {
+		compatible = "qcom,qca-auto-secondary";
+		qcom,firmware-managed-resources;
+		power-domains = <&scmi_power 11>;
+	};
+};
+
+&qupv3_se3_4uart {
+	status = "ok";
+	qcom,auto-suspend-disable;
+};
