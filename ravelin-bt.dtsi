@@ -45,4 +45,3 @@
 &qupv3_se2_4uart {
 	status = "ok";
 };
-

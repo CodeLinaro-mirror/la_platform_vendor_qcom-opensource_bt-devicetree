@@ -25,7 +25,3 @@
 	qcom,bt-vdd12-io-config   = <1800000 2000000 30000 1>;
 };
 
-&swr4 {
-	status = "disabled";
-};
-
