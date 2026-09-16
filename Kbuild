@@ -4,6 +4,7 @@ endif
 
 ifeq ($(CONFIG_ARCH_TUNA),y)
 dtbo-y += tuna-wcn7750-bt.dtbo
+dtbo-y += tuna-wcn7750-no-L6K.dtbo
 dtbo-y += tuna-kiwi-bt.dtbo
 endif
 
@@ -11,6 +12,7 @@ ifeq ($(CONFIG_ARCH_KERA), y)
 dtbo-y += kera-qca6750-bt.dtbo
 dtbo-y += kera-qca6750-bt-qmb.dtbo
 dtbo-y += kera-wcn7750-bt.dtbo
+dtbo-y += kera-wcn7760-bt-evk.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SUN), y)
