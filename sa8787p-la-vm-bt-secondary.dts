@@ -9,8 +9,8 @@
 #include "sa8787p-la-vm-bt-secondary.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. SA8787p Single LA  Guest Virtual Machine";
+	model = "Qualcomm Technologies, Inc. SA8787p Guest Virtual Machine";
 	compatible = "qcom,sa8787p", "qcom,quinvm";
 	qcom,msm-id = <742 0x10000>, <742 0x10001>;
-	qcom,board-id = <0x0 0x1000001>;
+	qcom,board-id = <0x0 0x1000001>, <0x0 0x2000001>, <0x0 0x2000002>, <0x0 0x3000001>, <0x0 0x4000002>;
 };
