@@ -22,6 +22,7 @@ dtbo-y += sun-peach-bt-v8.dtbo
 dtbo-y += sun-kiwi-bt-v8.dtbo
 dtbo-y += sun-wcn786x-v8.dtbo
 dtbo-y += sunp-hdk-peach-bt-v8.dtbo
+dtbo-y += sunp-iot-vc-wcn7881-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_RAVELIN), y)
