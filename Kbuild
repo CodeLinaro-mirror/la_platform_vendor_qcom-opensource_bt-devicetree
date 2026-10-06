@@ -12,6 +12,7 @@ ifeq ($(CONFIG_ARCH_KERA), y)
 dtbo-y += kera-qca6750-bt.dtbo
 dtbo-y += kera-qca6750-bt-qmb.dtbo
 dtbo-y += kera-wcn7750-bt.dtbo
+dtbo-y += kera-wcn7760-bt-evk.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SUN), y)
@@ -21,6 +22,7 @@ dtbo-y += sun-peach-bt-v8.dtbo
 dtbo-y += sun-kiwi-bt-v8.dtbo
 dtbo-y += sun-wcn786x-v8.dtbo
 dtbo-y += sunp-hdk-peach-bt-v8.dtbo
+dtbo-y += sunp-iot-vc-wcn7881-bt.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_RAVELIN), y)
