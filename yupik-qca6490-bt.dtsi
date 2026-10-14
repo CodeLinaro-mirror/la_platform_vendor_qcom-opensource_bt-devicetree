@@ -26,7 +26,7 @@
 
 &soc {
 	bluetooth: bt_qca6490 {
-		compatible = "qcom,qca6490-bt";
+		compatible = "qcom,qca6490";
 		pinctrl-names = "default";
 		pinctrl-0 = <&bt_en_sleep>;
 		qcom,bt-reset-gpio = <&tlmm 85 0>; /* BT_EN */
