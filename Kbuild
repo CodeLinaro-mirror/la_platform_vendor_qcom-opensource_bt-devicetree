@@ -33,6 +33,7 @@ endif
 
 ifeq ($(CONFIG_ARCH_SHIKRA),y)
 dtbo-y += shikra-bt.dtbo
+dtbo-y += shikra-wcn7760-bt-evk.dtbo
 endif
 
 always-y        := $(dtb-y) $(dtbo-y)
